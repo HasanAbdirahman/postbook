@@ -2,20 +2,23 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const postSchema = new Schema({
-  title: {
-    type: String,
-    minlength: 3,
-    trim: true,
-    required: true,
+const postSchema = new Schema(
+  {
+    title: {
+      type: String,
+      minength: 3,
+      trim: true,
+      required: true,
+    },
+    content: {
+      type: String,
+      trim: true,
+    },
+    postedBy: { type: Schema.Types.ObjectId, ref: "User" },
   },
-  content: {
-    type: String,
-    minlength: 20,
-    trim: true,
-  },
-  postedBy: [{ type: Schema.Types.ObjectId, ref: "User" }],
-  private: Boolean,
-});
+  {
+    timestamps: true,
+  }
+);
 
 module.exports = mongoose.model("Post", postSchema);

@@ -1,42 +1,35 @@
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./post.css";
-
+import "./editForm.css";
 import * as postAPI from "../../utilities/postAPI";
-export default function Post({ user }) {
-  // this holds the state of the post
-  const [content, setcontent] = useState([
-    {
-      title: "",
-      content: "",
-    },
-  ]);
+export default function EditForm() {
+  let { userId } = useParams();
+  const [changed, setChanged] = useState({
+    title: "",
+    content: "",
+  });
+  let navigate = useNavigate();
 
-  const navigate = useNavigate();
   function handleChange(evt) {
-    setcontent({ ...content, [evt.target.name]: evt.target.value });
+    setChanged({ ...changed, [evt.target.name]: evt.target.value });
   }
   async function handleSubmit(evt) {
     evt.preventDefault();
-    let creatingPost = await postAPI.addpost(content);
-    console.log(creatingPost);
-    setcontent(creatingPost);
+    console.log(changed);
+    await postAPI.getEdit(userId, changed);
     navigate("/posts/all");
   }
 
   return (
-    <div className="Post">
-      <h1>Please fill the form</h1>
-      <hr />
+    <div className="editForm">
+      <h1>Please fill the form to edit the post</h1>
       <form onSubmit={handleSubmit}>
         <li>
-          <label style={{ display: "block" }} htmlFor="name">
-            Title:
-          </label>
+          <label htmlFor="name">Title:</label>
           <input
             placeholder="title"
             name="title"
-            value={content.title}
+            value={changed.title}
             onChange={handleChange}
             id="title"
             required="required"
@@ -50,14 +43,16 @@ export default function Post({ user }) {
             id="txtid"
             name="content"
             rows="4"
-            cols="50"
+            //   cols="50"
             maxLength="200"
-            value={content.content}
+            value={changed.content}
             onChange={handleChange}
             required="required"
           />
         </li>
-        <button type="submit">Submit</button>
+        <button style={{ display: "block" }} type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

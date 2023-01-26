@@ -9,8 +9,8 @@ export default function Logout({ setUser }) {
     <div>
       <MDBBtn
         className="mb-4 px-5"
-        color="dark"
-        size="lg"
+        color="primary"
+        size="sm"
         onClick={handleClick}
       >
         LogOut

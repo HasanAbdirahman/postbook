@@ -6,8 +6,8 @@ export default function AuthPage({ setUser }) {
   const [showLogin, setShowLogIn] = useState(false);
 
   return (
-    <div className="AuthPage">
-      <h1>Authentication</h1>
+    <div className="AuthPage" style={{ display: "flex" }}>
+      <h1 style={{ textAlign: "center" }}>Authentication</h1>
       <MDBBtn
         onClick={() => setShowLogIn(!showLogin)}
         outline

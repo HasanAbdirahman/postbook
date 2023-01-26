@@ -15,9 +15,15 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(favicon(path.join(__dirname, "build", "favicon.ico")));
 app.use(express.static(path.join(__dirname, "build")));
+app.use(require("./config/checkToken"));
 
 // write all ur routes
 app.use("/api/users", require("./routes/api/users"));
+
+// we have to first make sure we have to log in
+const ensuredLoggedIn = require("./config/ensureLoggedIn");
+app.use("/api/post", ensuredLoggedIn, require("./routes/api/posts"));
+
 // "catch-all" route that will match all GET requests
 // that don't match an API route defined above
 app.get("/*", function (req, res) {
