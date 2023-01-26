@@ -15,7 +15,6 @@ export default function EditForm() {
   }
   async function handleSubmit(evt) {
     evt.preventDefault();
-    console.log(changed);
     await postAPI.getEdit(userId, changed);
     navigate("/posts/all");
   }

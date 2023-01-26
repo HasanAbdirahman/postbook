@@ -4,7 +4,7 @@ export default function Sidebar2({ sidebar }) {
     <div className={sidebar ? "Sidebar2 Sidebar--open " : "Sidebar2"}>
       <Link to="/">
         <li>
-          <i class="ri-home-fill"></i>
+          <i className="ri-home-fill"></i>
           Home
         </li>
       </Link>

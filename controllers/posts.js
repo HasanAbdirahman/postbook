@@ -35,7 +35,6 @@ async function deletePost(req, res) {
 }
 
 async function update(req, res) {
-  console.log(req.body);
   try {
     let edit = await Post.findByIdAndUpdate(
       req.params.id,
@@ -48,7 +47,6 @@ async function update(req, res) {
       }
     );
     res.status(200).json(edit);
-    console.log(edit);
   } catch (err) {
     res.status(400).json(err);
   }

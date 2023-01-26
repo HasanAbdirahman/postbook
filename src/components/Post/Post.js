@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./post.css";
 
 import * as postAPI from "../../utilities/postAPI";
+import NavBar from "../NavBar/NavBar";
 export default function Post({ user }) {
   // this holds the state of the post
   const [content, setcontent] = useState([
@@ -19,7 +20,6 @@ export default function Post({ user }) {
   async function handleSubmit(evt) {
     evt.preventDefault();
     let creatingPost = await postAPI.addpost(content);
-    console.log(creatingPost);
     setcontent(creatingPost);
     navigate("/posts/all");
   }

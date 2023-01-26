@@ -30,8 +30,6 @@ export default function IndexPage({ user }) {
 
   return (
     <div className="IndexPage">
-      <NavBar />
-
       <h1 style={{ textAlign: "center" }}>Check out all the posts</h1>
 
       {each}

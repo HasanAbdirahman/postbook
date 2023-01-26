@@ -6,7 +6,7 @@ export default function Logout({ setUser }) {
     setUser(null);
   }
   return (
-    <div>
+    <div style={{ textOrientation: "upright" }}>
       <MDBBtn
         className="mb-4 px-5"
         color="primary"

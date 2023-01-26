@@ -6,8 +6,10 @@ export default function AuthPage({ setUser }) {
   const [showLogin, setShowLogIn] = useState(false);
 
   return (
-    <div className="AuthPage" style={{ display: "flex" }}>
-      <h1 style={{ textAlign: "center" }}>Authentication</h1>
+    <>
+      <h1 style={{ marginTop: "13px" }}>
+        {showLogin ? "Don't have an account? " : "Already a user? "}
+      </h1>
       <MDBBtn
         onClick={() => setShowLogIn(!showLogin)}
         outline
@@ -18,11 +20,13 @@ export default function AuthPage({ setUser }) {
         {showLogin ? "SIGN UP" : "LOG IN"}
       </MDBBtn>
 
-      {showLogin ? (
-        <LogInForm setUser={setUser} />
-      ) : (
-        <SignUpForm setUser={setUser} />
-      )}
-    </div>
+      <div className="AuthPage" style={{ display: "flex" }}>
+        {showLogin ? (
+          <LogInForm setUser={setUser} />
+        ) : (
+          <SignUpForm setUser={setUser} />
+        )}
+      </div>
+    </>
   );
 }

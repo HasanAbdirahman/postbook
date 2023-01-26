@@ -5,7 +5,7 @@ export default function Sidebar({ openSideBar, user, setUser }) {
   return (
     <div className="Sidebar">
       <div className="burger" onClick={openSideBar}>
-        <i class="ri-menu-fill"></i>
+        <i className="ri-menu-fill"></i>
       </div>
       <div className="separate">
         <Link to="/post">

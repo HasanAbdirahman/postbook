@@ -24,18 +24,15 @@ export default function SignUpForm({ setUser }) {
 
   function handleChange(evt) {
     setNewUser({ ...newUser, [evt.target.name]: evt.target.value, error: "" });
-    console.log(newUser);
   }
 
   async function handleClick(evt) {
-    console.log(newUser);
     try {
       let formData = { ...newUser };
       delete formData.confirm;
       delete formData.error;
 
       let user = await userService.signUp(formData);
-      console.log(user);
       setUser(user);
     } catch {
       setNewUser({ ...newUser, error: "Sign Up Failed- Try Again" });

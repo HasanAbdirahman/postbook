@@ -21,29 +21,30 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
-        {user ? (
-          <>
-            <Route
+      {user ? (
+        <>
+          <NavBar
+            closeSideBar={toggleSidebar}
+            user={user}
+            setUser={setUser}
+            sidebar2={sidebar2}
+          />
+          <Routes>
+            {/* <Route
               path="/"
               element={
-                <NavBar
-                  closeSideBar={toggleSidebar}
-                  user={user}
-                  setUser={setUser}
-                  sidebar2={sidebar2}
-                />
+                
               }
-            />
+            /> */}
             <Route path="/post/:userId/edit" element={<EditForm />} />
             <Route path="/post" element={<Post user={user} />} />
             <Route path="/posts/all" element={<IndexPage user={user} />} />
             <Route path="/*" element={<IndexPage user={user} />} />
-          </>
-        ) : (
-          <Route path="/" element={<AuthPage setUser={setUser} />} />
-        )}
-      </Routes>
+          </Routes>
+        </>
+      ) : (
+        <AuthPage setUser={setUser} />
+      )}
     </div>
   );
 }
