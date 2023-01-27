@@ -9,7 +9,7 @@
 ![LogIn](https://imgur.com/zyBNSYY.png)
 #### Screenshot #2 - SignUp page
 ![Signup](https://imgur.com/D4vE4Nn.png)
-#### Screenshot #2 - Main page
+#### Screenshot #3 - Main page
 
 ![Main Page](https://imgur.com/QaoGvGE.png)
 
