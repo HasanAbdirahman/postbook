@@ -2,12 +2,12 @@
 #### Description and background of the app
 * The PostBook App is an app that emulates facebook where you can post what you are thinking about.
 * Then people can see other people posts and they can like it and make sure they cannot  edit and delete
-* Peopkle can edit and delete their posts
+* People can edit and delete their posts
 
 ### Screenshots
 #### Screenshot #1 - Landing page before login
-![Screenshot #1](https://imgur.com/a/oLP8lWg)
-
+![Screenshot #1] (https://imgur.com/a/oLP8lWg)
+!(Main Page) (https://imgur.com/QaoGvGE)
 
 ### Technologies Used
 * Web languages
