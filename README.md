@@ -6,7 +6,8 @@
 
 ### Screenshots
 #### Screenshot #1 - Landing page before login
-![LogIn](https://imgur.com/a/oLP8lWg.png)
+![LogIn](https://imgur.com/zyBNSYY)
+![Signup](https://imgur.com/D4vE4Nn.png)
 ![Main Page](https://imgur.com/QaoGvGE.png)
 
 ### Technologies Used
