@@ -6,7 +6,6 @@ import { useState } from "react";
 import "@trendmicro/react-sidenav/dist/react-sidenav.css";
 import { getUser } from "../../utilities/user-service";
 import IndexPage from "../IndexPage/IndexPage";
-import { createContext } from "react";
 import Post from "../../components/Post/Post";
 import NavBar from "../../components/NavBar/NavBar";
 import EditForm from "../../components/editForm/editForm";
@@ -30,12 +29,6 @@ function App() {
             sidebar2={sidebar2}
           />
           <Routes>
-            {/* <Route
-              path="/"
-              element={
-                
-              }
-            /> */}
             <Route path="/post/:userId/edit" element={<EditForm />} />
             <Route path="/post" element={<Post user={user} />} />
             <Route path="/posts/all" element={<IndexPage user={user} />} />
