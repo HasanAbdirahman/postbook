@@ -6,7 +6,7 @@
 
 ### Screenshots
 #### Screenshot #1 - Landing page before login
-![LogIn](https://imgur.com/zyBNSYY)
+![LogIn](https://imgur.com/zyBNSYY.png)
 ![Signup](https://imgur.com/D4vE4Nn.png)
 ![Main Page](https://imgur.com/QaoGvGE.png)
 
@@ -16,7 +16,7 @@
     * CSS
     * Javascript
 * CSS framework
-    * Bootstrap
+    * React Bootstrap
 * Server environment
     * Express
 * React
