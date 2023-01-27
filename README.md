@@ -19,8 +19,16 @@
     * React Bootstrap
 * Server environment
     * Express
-* React
-
+* Database
+ * MongoDB
+* Authentication Method
+   * Token-Based Authentication
+* Others
+   * Bcrypt
+   * react-router-dom
+   * jsonwebtoken
+   * dotenv
+   
 ### Getting Started
 #### Click on the following link to access the Restaurant Reviewer app
 * [Trello board - project planning](https://trello.com/b/mECJycBI/react-website)
@@ -31,4 +39,5 @@
 #### The following functionality can be added 
 * Comment
     * Add comment section on your post on other people's posts
-
+* Like
+   * Fix the Like issue I have
